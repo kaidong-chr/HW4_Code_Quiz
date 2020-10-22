@@ -3,23 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Code Quiz</title>
   </head>
   <body>
     <!-- Score board link top left of main page -->
-    <div><a href="scoreboard.html">Score Board</a></div>
+    <div class="scoreboard"><a href="scoreboard.html">Score Board</a></div>
     <!-- Timer top right of main page -->
-    <div>Time Left:</div>
+    <div class="timer">Time Left:</div>
 
-    <!-- Instructions -->
-    <div></div>
+    <div class="container">
+      <!-- Instructions -->
+      <h1>JavaScript Coding Quiz</h1>
+      <p>Answer as many questions correctly as fast as you can! Remember there will be penalties.</p>
+      <!-- Start -->
+      <button class="startQuiz">Start Quiz!</button>
+        
+      <!-- Questions and choices -->
+      <div class="questions"></div>
+        <ul id="choices"></ul>
 
-    <!-- Questions -->
-    <div></div>
-
-    <!-- Final Score -->
-    <div></div>
+    </div>
 
     <script src="assets/script.js"></script>
     <script src="assets/questions.js"></script>
