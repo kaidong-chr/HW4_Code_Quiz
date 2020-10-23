@@ -8,21 +8,24 @@
   </head>
   <body>
     <!-- Score board link top left of main page -->
-    <div class="scoreboard"><a href="scoreboard.html">Score Board</a></div>
+    <div class="scoreboard">
+      <a href="scoreboard.html">High Scores!</a>
+    </div>
     <!-- Timer top right of main page -->
-    <div class="timer">Time Left:</div>
+    <div id="timer" class="timer">Time Left:</div>
 
     <div class="container">
       <!-- Instructions -->
       <h1>JavaScript Coding Quiz</h1>
-      <p>Answer as many questions correctly as fast as you can! Remember there will be penalties.</p>
+      <p>
+        Answer as many questions correctly as fast as you can! Remember there
+        will be penalties.
+      </p>
       <!-- Start -->
-      <button class="startQuiz">Start Quiz!</button>
-        
+      <button id="startQuiz" class="startQuiz">Start Quiz!</button>
       <!-- Questions and choices -->
-      <div class="questions"></div>
-        <ul id="choices"></ul>
-
+      <div id="questions"></div>
+      <ul id="choices"></ul>
     </div>
 
     <script src="assets/script.js"></script>
