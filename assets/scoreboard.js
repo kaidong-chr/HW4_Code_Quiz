@@ -1,1 +1,5 @@
-// Scoreboard stuff
+// Get highscore from localStorage
+
+// List highscores
+
+// ??
