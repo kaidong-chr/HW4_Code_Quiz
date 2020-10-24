@@ -1,25 +1,25 @@
 // Variable for elements
-let timerEl = document.getElementById("timerStart");
-let startQuizEl = document.getElementById("startQuiz");
-let questionsEl = document.getElementById("questions");
-let container = document.getElementById("container");
+var timerEl = document.getElementById("timerStart");
+var startQuizEl = document.getElementById("startQuiz");
+var questionsEl = document.getElementById("questions");
+var container = document.getElementById("container");
 
 // Variables total time, interval,  penalty and questions progress
-let timer = 75;
-let timeInterval = 0;
-let penalty = 5;
-let questionIndex = 0;
-let score = 0;
+var timer = 75;
+var timeInterval = 0;
+var penalty = 5;
+var questionIndex = 0;
+var score = 0;
 
 // Creating the ul element for later use
-let ulCreate = document.createElement("ul"); //Clear this up later
+var ulCreate = document.createElement("ul"); //Clear this up later
 
 // Timer goes and user display
 startQuizEl.addEventListener("click", function () {
   if (timeInterval === 0) {
     timeInterval = setInterval(function () {
       timer--;
-      timerEl.textContent = "Time Left:" + timer;
+      timerEl.textContent = "Time Left: " + timer;
 
       if (timer <= 0) {
         clearInterval(timeInterval);
@@ -47,7 +47,7 @@ function render(questionIndex) {
 
   // List question choices for each new questions
   allChoices.forEach(function (newEach) {
-    let eachItem = document.createElement("li");
+    var eachItem = document.createElement("li");
     eachItem.textContent = newEach;
     questionsEl.appendChild(ulCreate);
     ulCreate.appendChild(eachItem);
@@ -83,13 +83,13 @@ function compare(event) {
     // When quiz is finished we will show user stats
     quizFinish();
     newDiv.textContent =
-      "This is the end" +
+      "This is the end!" +
       " " +
       "You got " +
       score +
       "/" +
       questions.length +
-      "right!";
+      " right!";
   } else {
     render(questionIndex);
   }
@@ -102,14 +102,14 @@ function quizFinish() {
   questionsEl.innerHTML = "";
   timerEl.innerHTML = "";
 
-  // Heading
+  // Heading for done message
   var createH1 = document.createElement("h1");
   createH1.setAttribute("id", "createH1");
   createH1.textContent = "All Done!";
 
   questionsEl.appendChild(createH1);
 
-  // Paragraph
+  // Paragraph for displaying final score
   var createP = document.createElement("p");
   createP.setAttribute("id", "createP");
 
@@ -170,7 +170,7 @@ function quizFinish() {
       var newScore = JSON.stringify(allScores);
       localStorage.setItem("allScores", newScore);
     
-      // Travels to final page
+      // Go to scoreboard
       window.location.replace("./scoreboard.html");
     }
   });
