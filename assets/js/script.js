@@ -64,7 +64,7 @@ function compare(event) {
     var newDiv = document.createElement("div");
     newDiv.setAttribute("id", "newDiv");
     // Correct answer
-    if (element.textContent == questions[questionIndex].anwser) {
+    if (element.textContent == questions[questionIndex].answer) {
       score++;
       newDiv.textContent =
         "Right! The answer is: " + questions[questionIndex].answer;
@@ -72,7 +72,7 @@ function compare(event) {
       // Penalty for wrong answers
       timer = timer - penalty;
       newDiv.textContent =
-        "The correct answer is " + questions[questionIndex].answer;
+        "Oops! The correct answer is " + questions[questionIndex].answer;
     }
   }
 
@@ -125,14 +125,14 @@ function quizFinish() {
     questionsEl.appendChild(createP2);
   }
 
-  // Creat label to enter initials
+  // Create label to enter initials
   var createLabel = document.createElement("label");
   createLabel.setAttribute("id", "createLabel");
   createLabel.textContent = "Enter your initials: ";
 
   questionsEl.appendChild(createLabel);
 
-  // Input for the initials
+  // Create input for the initials
   var createInput = document.createElement("input");
   createInput.setAttribute("type", "text");
   createInput.setAttribute("id", "initials");
@@ -140,7 +140,7 @@ function quizFinish() {
 
   questionsEl.appendChild(createInput);
 
-  // Submit the highscore and user initials
+  // Create submit for highscore and user initials
   var createSubmit = document.createElement("button");
   createSubmit.setAttribute("type", "submit");
   createSubmit.setAttribute("id", "Submit");

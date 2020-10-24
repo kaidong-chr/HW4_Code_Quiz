@@ -1,108 +1,182 @@
 :root {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .scoreboard {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 5px;
-    font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px;
+  font-weight: bold;
 }
 
 .timer {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: bold;
 }
 
 .container {
-    position: absolute;
-    background-color: whitesmoke;
-    top: 20%;
-    left: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    height: 500px;
+  position: absolute;
+  background-color: whitesmoke;
+  top: 20%;
+  left: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 500px;
 }
 
 .startQuiz {
-    background-color: gold;
-    padding: 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
-    margin-left: 40%;
+  background-color: gold;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin-left: 40%;
 }
 
-h1, p {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 10px;
+h1,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+label,
+div {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 label {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 li {
-    background-color: gold;
-    margin-top: 10px;
-    padding: 5px 15px;
-    width: 80%;
-    font-size: 18px;
-    color: white;
+  background-color: gold;
+  margin-top: 10px;
+  padding: 5px 15px;
+  width: 80%;
+  font-size: 18px;
+  color: white;
 }
 
 textarea {
-    width: 90%;
-    margin: 20px;
+  width: 90%;
+  margin: 20px;
 }
 
 #questions {
-    margin: 20px;
+  margin: 20px;
 }
 
 #timer {
-    float: right;
+  float: right;
 }
 
 #goBack {
-    background-color: gold;
-    position: relative;
-    padding: 10px;
-    font-size: 20px;
-    color: white;
-    top: 30%;
-    left: 55%;
-    width: auto;
-    text-align: center;
-    text-decoration: none;
+  background-color: gold;
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  top: 30%;
+  left: 55%;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
 }
 
 #clear {
-    background-color: gold;
-    position: relative;
-    padding: 10px;
-    font-size: 20px;
-    color: white;
-    top: 30%;
-    right: 5%;
-    text-align: center;
+  background-color: gold;
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  top: 30%;
+  left: 12%;
+  text-align: center;
 }
 
 #Submit {
-    background-color: gold;
-    margin-left: 33%;
-    padding: 15px 32px;
-    font-size: 20px;
-    color: white;
+  background-color: gold;
+  margin-right: 10%;
+  margin-left: 5%;
+  padding: 20px 35px;
+  font-size: 20px;
+  color: white;
 }
 
 #newDiv {
-    margin-top: 20px;
-    border-top: 1px solid lightgray;
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+}
+
+@media screen and (max-width: 992px) {
+
+    body {
+      max-width: 992px;
+    }
+      .container {
+      position: absolute;
+      left: 15%;
+    }
+  
+    a {
+      margin-left: 20%;
+    }
+
+    #goBack {
+      position: relative;
+      left: 55%;
+    }
+  
+    #clear {
+      position: relative;
+      right: 5%;
+    }
+  }
+
+@media screen and (max-width: 786px) {
+
+  body {
+    max-width: 786px;
+  }
+
+    .container {
+    position: absolute;
+    left: 5%;
+  }
+
+  a {
+    margin-left: 20%;
+  }
+
+  #goBack {
+    position: relative;
+    left: 55%;
+  }
+
+  #clear {
+    position: relative;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 400) {
+
+  body {
+    min-width: 640px;
+  }
+
+  .container {
+    position: absolute;
+    left: 10%;
+  }
+
+  a {
+    margin-left: 10%;
+  }
 }
