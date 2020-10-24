@@ -102,7 +102,7 @@ function quizFinish() {
   questionsEl.innerHTML = "";
   timerEl.innerHTML = "";
 
-  // Heading:
+  // Heading
   var createH1 = document.createElement("h1");
   createH1.setAttribute("id", "createH1");
   createH1.textContent = "All Done!";
@@ -125,14 +125,14 @@ function quizFinish() {
     questionsEl.appendChild(createP2);
   }
 
-  // Label
+  // Creat label to enter initials
   var createLabel = document.createElement("label");
   createLabel.setAttribute("id", "createLabel");
   createLabel.textContent = "Enter your initials: ";
 
   questionsEl.appendChild(createLabel);
 
-  // input
+  // Input for the initials
   var createInput = document.createElement("input");
   createInput.setAttribute("type", "text");
   createInput.setAttribute("id", "initials");
@@ -140,7 +140,7 @@ function quizFinish() {
 
   questionsEl.appendChild(createInput);
 
-  // submit
+  // Submit the highscore and user initials
   var createSubmit = document.createElement("button");
   createSubmit.setAttribute("type", "submit");
   createSubmit.setAttribute("id", "Submit");
@@ -148,7 +148,7 @@ function quizFinish() {
 
   questionsEl.appendChild(createSubmit);
 
-  // Event listener to capture initials and local storage for initials and score
+  // Event listener to capture initials and scores for local storage
   createSubmit.addEventListener("click", function () {
     var initials = createInput.value;
 
@@ -169,6 +169,7 @@ function quizFinish() {
       allScores.push(finalScore);
       var newScore = JSON.stringify(allScores);
       localStorage.setItem("allScores", newScore);
+    
       // Travels to final page
       window.location.replace("./scoreboard.html");
     }
