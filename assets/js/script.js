@@ -72,7 +72,7 @@ function compare(event) {
       // Penalty for wrong answers
       timer = timer - penalty;
       newDiv.textContent =
-        "Oops! The correct answer is " + questions[questionIndex].answer;
+        "The correct answer is " + questions[questionIndex].answer;
     }
   }
 
