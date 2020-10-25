@@ -12,7 +12,7 @@ Create a timed coding quiz with multiple choices and scored board features using
 
 ### Demonstration
 
-![Image](./assets/image/Code_Quiz.gif "Code Quiz Demostration")
+![Image](./assets/image/HW4_Code_Quiz.gif "Code Quiz Demostration")
 ![Image](https://img.shields.io/badge/Languages-html%20%7C%20css%20%7C%20javascript-yellow)
 
 ### Installation

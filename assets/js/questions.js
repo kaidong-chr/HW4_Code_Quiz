@@ -1,5 +1,5 @@
 // List of 5 questions with choices
-var questions = [
+let questions = [
     {
         title: "Is JavaScript a case-sensitive language?",
         choices: ["true", "false"],

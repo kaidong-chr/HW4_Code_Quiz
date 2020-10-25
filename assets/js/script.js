@@ -1,18 +1,18 @@
-// Variable for elements
-var timerEl = document.getElementById("timerStart");
-var startQuizEl = document.getElementById("startQuiz");
-var questionsEl = document.getElementById("questions");
-var container = document.getElementById("container");
+// variable for elements
+let timerEl = document.getElementById("timerStart");
+let startQuizEl = document.getElementById("startQuiz");
+let questionsEl = document.getElementById("questions");
+let container = document.getElementById("container");
 
-// Variables total time, interval,  penalty and questions progress
-var timer = 75;
-var timeInterval = 0;
-var penalty = 5;
-var questionIndex = 0;
-var score = 0;
+// variables total time, interval,  penalty and questions progress
+let timer = 75;
+let timeInterval = 0;
+let penalty = 5;
+let questionIndex = 0;
+let score = 0;
 
 // Creating the ul element for later use
-var ulCreate = document.createElement("ul"); //Clear this up later
+let ulCreate = document.createElement("ul");
 
 // Timer goes and user display
 startQuizEl.addEventListener("click", function () {
@@ -37,7 +37,7 @@ function render(questionIndex) {
   questionsEl.innerHTML = "";
   ulCreate.innerHTML = "";
   // Loop through questions and choices
-  for (var i = 0; i < questions.length; i++) {
+  for (let i = 0; i < questions.length; i++) {
     //
     var allQuestions = questions[questionIndex].title;
     //
@@ -47,7 +47,7 @@ function render(questionIndex) {
 
   // List question choices for each new questions
   allChoices.forEach(function (newEach) {
-    var eachItem = document.createElement("li");
+    let eachItem = document.createElement("li");
     eachItem.textContent = newEach;
     questionsEl.appendChild(ulCreate);
     ulCreate.appendChild(eachItem);
@@ -57,7 +57,7 @@ function render(questionIndex) {
 
 // Compare choices to answer
 function compare(event) {
-  var element = event.target;
+  let element = event.target;
 
   if (element.matches("li")) {
 
@@ -103,14 +103,14 @@ function quizFinish() {
   timerEl.innerHTML = "";
 
   // Heading for done message
-  var createH1 = document.createElement("h1");
+  let createH1 = document.createElement("h1");
   createH1.setAttribute("id", "createH1");
   createH1.textContent = "All Done!";
 
   questionsEl.appendChild(createH1);
 
   // Paragraph for displaying final score
-  var createP = document.createElement("p");
+  let createP = document.createElement("p");
   createP.setAttribute("id", "createP");
 
   questionsEl.appendChild(createP);
@@ -126,14 +126,14 @@ function quizFinish() {
   }
 
   // Create label to enter initials
-  var createLabel = document.createElement("label");
+  let createLabel = document.createElement("label");
   createLabel.setAttribute("id", "createLabel");
   createLabel.textContent = "Enter your initials: ";
 
   questionsEl.appendChild(createLabel);
 
   // Create input for the initials
-  var createInput = document.createElement("input");
+  let createInput = document.createElement("input");
   createInput.setAttribute("type", "text");
   createInput.setAttribute("id", "initials");
   createInput.textContent = "";
@@ -141,7 +141,7 @@ function quizFinish() {
   questionsEl.appendChild(createInput);
 
   // Create submit for highscore and user initials
-  var createSubmit = document.createElement("button");
+  let createSubmit = document.createElement("button");
   createSubmit.setAttribute("type", "submit");
   createSubmit.setAttribute("id", "Submit");
   createSubmit.textContent = "Submit";
@@ -150,16 +150,14 @@ function quizFinish() {
 
   // Event listener to capture initials and scores for local storage
   createSubmit.addEventListener("click", function () {
-    var initials = createInput.value;
+    let initials = createInput.value;
 
     if (initials === null) {
-      console.log("No value entered!");
     } else {
       var finalScore = {
         initials: initials,
         score: timeRemaining,
       };
-      console.log(finalScore);
       var allScores = localStorage.getItem("allScores");
       if (allScores === null) {
         allScores = [];
